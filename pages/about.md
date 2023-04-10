@@ -7,8 +7,7 @@ weight: 3
 
 # **About Me**
 
-Hi I am **{{ site.author.name }}**,<br>
-Rats!
+Hi, I'm **{{ site.author.name }}**. I am definitely not a rat!
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
