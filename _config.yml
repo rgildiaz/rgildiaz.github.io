@@ -5,12 +5,12 @@
 # NOTE: it looks like you need to rebuild + repush everytime you update this _config.yml file
 
 ### Site Settings ###
-title               : Jill Naiman 
+title               : Rafi Gil Diaz 
 description         : >-
-                      I am definitely not a corgi!
+                      Rats!
 baseurl             : ""   # Change to empty quotes if you are hosting your site at <your-username>.github.io directly,
 #                                             otherwise will be hosted at <your-username>.github.io/{{base_url}}
-repository          : jnaiman               # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+repository          : rgildiaz/rgildiaz.github.io               # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 
@@ -34,13 +34,13 @@ nav_exclude:                                            # The following paths ar
 
 ### Author Info ###
 author:
-  name              : A. P. Corgi
-  image             : https://dogtime.com/assets/uploads/gallery/pembroke-welsh-corgi-dog-breed-pictures/prance-8.jpg
+  name              : Rafi Gil Diaz
+  image             : https://i5.walmartimages.com/asr/14da72b0-b283-4875-b328-a77cf43c8a5b.470dc4ca55b933210de6539b1c169bb1.jpeg
 #  behance           : your_username
 # dribbble          : your_username
-  email             : username@domain.com
+  email             : gildiaz2@illinois.edu
 #  facebook          : your_username
-  github            : jnaiman # JPN
+  github            : rgildiaz # JPN
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
@@ -51,9 +51,9 @@ author:
 # stackoverflow     : your_user_id
 # tumblr            : your_username.tumblr.com
 #  twitch            : your_username
-  twitter           : your_username
+  # twitter           : your_username
 #  vimeo             : your_username
-  youtube           : your_channel_name
+  # youtube           : your_channel_name
 # keybase           : your_username
 
 
