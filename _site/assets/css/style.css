@@ -90,7 +90,7 @@
 @keyframes four-anim { 50% { transform: scale(0.98); } }
 html { padding-left: calc(100vw - 100%); }
 
-body { font-family: "Poppins", sans-serif; }
+body { font-family: "IBM Plex Sans", "Poppins", sans-serif; }
 
 .badge { font-weight: 500; }
 

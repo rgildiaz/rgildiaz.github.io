@@ -1,6 +1,6 @@
 ---
 name: Homework 10
-tools: [Python, HTML, vega-lite]
+tools: [Python, vega-lite]
 image: assets/pngs/bigfoot.png
 description: Visualizing Bigfoot Sightings with Altair
 custom_js:
@@ -13,6 +13,8 @@ custom_js:
 # Vega-lite + Altair
 
 _Visualizing Bigfoot Sightings_
+
+_2023.04.10_
 
 ---
 
