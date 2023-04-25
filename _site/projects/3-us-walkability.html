@@ -80,7 +80,7 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1 id="walkability-across-the-us">Walkability Across the US</h1>
+  <h1 id="walkability-in-the-us">Walkability in the US</h1>
 
 <p><em>Analyzing the National Walkability Index Database</em></p>
 
@@ -88,13 +88,20 @@
 
 <hr />
 
-<p>It’s no secret that the United States suffers from a “car culture”. Parking lots bigger than the malls they were built for, over 4 million miles of highway built [<a href="#src1">1</a>], and 3.17 trillion vehicle-miles traveled in 2022 [<a href="#src2">2</a>] help paint a picture of the state of transportation in the US.</p>
+<p>It’s no secret that the United States suffers from a “car culture”. Parking lots bigger than the malls or apartments they were built for are a regular sight in metropolitan areas. The US highway network spans <a href="https://www.statista.com/statistics/183397/united-states-highway-mileage-since-1990/">over 4 million miles</a>, and an estimated <a href="https://www.statista.com/statistics/185579/us-vehicle-miles-in-transit-since-1960/">3.17 <em>trillion</em> vehicle-miles were driven in 2022</a> alone.</p>
 
-<h3 id="references">References</h3>
+<p>When put compared with other major countries around the world, it becomes apparent just how much more Americans drive: in 2017, 4.1 million passenger-miles (distance of trip × number of passengers) were traveled in the US, less than Japan, Great Britain, and Australia combined (<a href="https://data.oecd.org/transport/passenger-transport.htm">source</a>).</p>
 
-<p>[1] <span id="src1"></span></p>
+<!-- center the chart-->
+<div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+  <vegachart schema-url="/assets/json/car_usage.json" style="width: fit-content"></vegachart>
+</div>
 
-<p>[2] <span id="src2"></span></p>
+<h2 id="the-national-walkability-index">The National Walkability Index</h2>
+
+<vegachart schema-url="/assets/json/walkability.json" style="width: 100%"></vegachart>
+
+<h2 id="more-information">More Information</h2>
 
 <p>Explore the data on your own!</p>
 
