@@ -1,7 +1,7 @@
 ---
 name: Walkability in the US
 tools: [Python, vega-lite]
-image: assets/pngs/walkability.png
+image: assets/pngs/walkability1.png
 description: Analyzing the National Walkability Index Database
 custom_js:
   - vega.min
