@@ -32,12 +32,21 @@ When compared with other major countries around the world, it becomes apparent j
 
 ## The National Walkability Index
 
-One method the US Environmental Protection Agency is using in an attempt to promote "smarter" or healthier cities is attempting to create an objective measure of walkability. The [National Walkability Index Dataset](https://catalog.data.gov/dataset/walkability-index) is the culmination of their work in this area, aggregating and transforming data from an earlier EPA project, the [Smart Location Dataset](), and ranking the weight of some measurements that were taken.
+One method the US Environmental Protection Agency is using in an attempt to promote "smarter" or healthier cities is attempting to create an objective measure of walkability. The [National Walkability Index Dataset](https://catalog.data.gov/dataset/walkability-index) is the culmination of their work in this area, aggregating and transforming data from an earlier EPA project, the [Smart Location Database](https://www.epa.gov/smartgrowth/smart-location-mapping#SLD) (SLD), to consider the factors they found to be most important to a city's walkability.
+
+In loose terms, "walkability" could be defined as "how easy and inviting it is to choose walking over any other mode of transport in any given location". The EPA states in loose terms, "Walkability depends upon characteristics of the built environment that influence the likelihood of walking being used as a mode of travel" ([source](https://catalog.data.gov/dataset/walkability-index)).
+
+To calculate a Walkability Index for each region tracked in the SLD, the EPA team considered four main factors:
+
+1. **Employment and household entropy**
+2. **8-tier employment entropy**
+3. **Street intersection density**
+4. **Distance from the population-weighted centroid of an area to the nearest transit stop**
 
 I hope this dashboard helps to illustrate the relationships between these different factors.
 
 <fig style="width: 100%; display: flex; flex-direction: column; align-items: center;">
-  <vegachart schema-url="{{ site.baseurl }}/assets/json/walkability.json" style="width: 100%"></vegachart>
+  <vegachart schema-url="{{ site.baseurl }}/assets/json/walkability.json" style="width: fit-content"></vegachart>
   <figcaption style="font-style: italic">
     Data collected from <a href="https://catalog.data.gov/dataset/walkability-index">US EPA</a>
   </figcaption>
