@@ -8,25 +8,27 @@
 import altair as alt
 import pandas as pd
 import os
+import sys
 
 alt.data_transformers.disable_max_rows()    # src: https://altair-viz.github.io/altair-viz-v4/user_guide/faq.html#maxrowserror-how-can-i-plot-large-datasets
 
 myJekyllDir = '/Users/rafigildiaz/Desktop/IS 445/rgildiaz.github.io/assets/json'
 
 def main():
+  sys.stdout.write("Starting the script...\n")
   df = fetch_data()
-  print("Data fetched")
+  sys.stdout.write("Data fetched\n")
 
   df = clean(df)
-  print("Data cleaned")
+  sys.stdout.write("Data cleaned\n")
 
   chart = viz(df)
-  print("Viz done")
+  sys.stdout.write("Chart created\n")
 
   # save the chart as a json file
   chart.save(myJekyllDir + "/walkability.json")
 
-  print("Chart saved")
+  sys.stdout.write("Script finished\n")
 
 def fetch_data():
   """
@@ -39,10 +41,10 @@ def fetch_data():
   fname = 'EPA_SmartLocationDatabase_V3_Jan_2021_Final.csv'
 
   if os.path.isfile(os.getcwd() + "/data/" + fname):
-    print("Using the local file...")
+    sys.stdout.write("Using the local file...\n")
     df = pd.read_csv("data/" + fname)
   else:
-    print("Downloading the file from the web...")
+    sys.stdout.write("Downloading the file...\n")
     df = pd.read_csv('https://media.githubusercontent.com/media/rgildiaz/datasets/main/walkability/EPA_SmartLocationDatabase_V3_Jan_2021_Final.csv')
 
   return df
@@ -101,7 +103,12 @@ def clean(df: pd.DataFrame):
   df = df[df['CBSA_POP'] > 0]
 
   # drop rows with 0 or negative values
-  df = df[(df['D3B'] > 0) & (df['D4A'] > 0)]
+  df = df[
+    (df['D3B'] > 0) & 
+    (df['D4A'] > 0) & 
+    (df['D2A_EPHHM'] > 0) & 
+    (df['D2B_E8MIXA'] > 0)
+  ]
 
   # get the state names from FIPS codes
   df['StateName'] = df['STATEFP'].map(state_codes)

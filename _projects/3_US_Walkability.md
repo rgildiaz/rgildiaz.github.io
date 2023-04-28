@@ -14,7 +14,7 @@ custom_js:
 
 _Analyzing the National Walkability Index Database_
 
-_2023.04.28_
+_2023.04.28 - by Rafi Gil Diaz_
 
 ---
 
@@ -26,7 +26,7 @@ When compared with other major countries around the world, it becomes apparent j
 <fig style="width: 100%; display: flex; flex-direction: column; align-items: center;">
   <vegachart schema-url="{{ site.baseurl }}/assets/json/car_usage.json" style="width: fit-content"></vegachart>
   <figcaption style="font-style: italic">
-    Data collected from <a href="https://data.oecd.org/transport/passenger-transport.htm">OCED</a>
+    Data: <a href="https://data.oecd.org/transport/passenger-transport.htm">OCED</a>, Viz: <a href="#more-information">Me</a>
   </figcaption>
 </fig>
 
@@ -38,19 +38,42 @@ In loose terms, "walkability" could be defined as "how easy and inviting it is t
 
 To calculate a Walkability Index for each region tracked in the SLD, the EPA team considered four main factors:
 
-1. **Employment and household entropy**
-2. **8-tier employment entropy**
+1. **8-tier employment entropy** - Employment is divided into 8 categories: retail, office, service, industrial, entertainment, education, healthcare, and public administration ([EPA](https://enviroatlas.epa.gov/enviroatlas/DataFactSheets/pdf/Supplemental/Employmentdiversity.pdf)). Higher entropy means there is a greater mix of job categories.
+2. **Employment and household entropy** - Similar to 8-tier employment entropy, but also considers households.
 3. **Street intersection density**
 4. **Distance from the population-weighted centroid of an area to the nearest transit stop**
 
-I hope this dashboard helps to illustrate the relationships between these different factors.
+In general, a city that is high in **8-tier employment entropy**, **employment and household entropy**, and **street intersection density** will be more walkable than a city low in those factors. A city with a lower **distance from the population-weighted centroid of an area to the nearest transit stop** will likely be more walkable than a city with a higher distance.
 
-<fig style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+I hope this dashboard helps to illustrate the relationships between these different factors and helps to demonstrate the trends mentioned above.
+
+<fig style="width: 100%; display: flex; flex-direction: column; align-items: center; margin: 1.5em 0;">
   <vegachart schema-url="{{ site.baseurl }}/assets/json/walkability.json" style="width: fit-content"></vegachart>
   <figcaption style="font-style: italic">
-    Data collected from <a href="https://catalog.data.gov/dataset/walkability-index">US EPA</a>
+    Data: <a href="https://catalog.data.gov/dataset/walkability-index">US EPA</a>, Viz: <a href="#more-information">Me</a>
   </figcaption>
 </fig>
+
+> _It seems like some of the tooltips break when this site is in dark mode. Use the sun/moon button at the top of the page to switch the theme if you can't read the CBSA Name in the tooltips for the second and third graphs. I tried fixing this with [Altair](https://altair-viz.github.io/), which was used to generate the visualizations, but it seems to be a problem with the way tooltips are rendered, not with any setting that can be changed._
+
+
+## Other Research About Walkability
+
+While the National Walkability Index has been made available for public use, it has also been used internally by the US government groups for studies or other projects. One such project is the **CDC**'s 2020 study, [_Associations between the National Walkability Index and walking among US Adults_](https://stacks.cdc.gov/view/cdc/111032).
+
+<fig style="width: 100%; display: flex; flex-direction: column; align-items: center; margin: 1.5em 0;">
+  <h5>Associations between the National Walkability Index and walking among US Adults</h5>
+  <img 
+    src="{{ site.baseurl }}/assets/pngs/cdc_111032_DS3.jpeg" 
+    style="max-width: 700px"
+    alt="Associations between the National Walkability Index and walking among US Adults"
+  />
+  <figcaption style="font-style: italic">
+    Walking habits among US adults as correlated with different census statistics, urban and rural. Source: <a href="https://stacks.cdc.gov/view/cdc/111032">CDC</a>
+  </figcaption>
+</fig>
+
+This study worked to correlate the data gathered from the EPA's Walkability Index with information about walking habits from the 2015 [National Health Interview Survey](https://www.cdc.gov/nchs/nhis/index.htm). I believe the above visualization does a good job of summarizing their work, showing where different categories of people are more likely to live. As you might guess, urban areas contain more walkable locations (this is in part due to the way Walkability is measured, [described above](#the-national-walkability-index)). It also seems like the Northeast contains the highest percentage of highly walkable areas, for both rural and urban locations.
 
 ## More Information
 
